@@ -34,7 +34,7 @@ export default function RoutePlannerPage() {
   useEffect(() => {
     // If using current location, we need to create a fake origin node linking to the closest real node
     const effectiveOrigin = useCurrentLocation && userPosition 
-      ? { id: 'current-gps', name: 'My Current Location', type: 'entrance', lat: userPosition.lat, lng: userPosition.lng, accessible: true, icon: 'map-pin', searchTags: [] } as CampusLocation
+      ? { id: 'current-gps', name: 'My Current Location', description: 'Your current external GPS location', type: 'entrance', lat: userPosition.lat, lng: userPosition.lng, accessible: true, icon: 'map-pin', searchTags: [] } as unknown as CampusLocation
       : origin;
 
     if (effectiveOrigin && destination) {

@@ -1,0 +1,90 @@
+[
+  {
+    "id": "event-1",
+    "title": "Welcome Week Orientation",
+    "description": "Meet your lecturers, tour the campus, and get your student ID. Morning tea provided.",
+    "locationId": "student-hub",
+    "date": "2026-04-09",
+    "startTime": "09:00",
+    "endTime": "11:00",
+    "category": "orientation",
+    "isAccessible": true
+  },
+  {
+    "id": "event-2",
+    "title": "Introduction to Data Science",
+    "description": "First lecture of INF301 — bring your laptop and AIIHE login credentials.",
+    "locationId": "lecture-theatre-1",
+    "date": "2026-04-09",
+    "startTime": "11:30",
+    "endTime": "13:00",
+    "category": "lecture",
+    "isAccessible": true
+  },
+  {
+    "id": "event-3",
+    "title": "Inclusive Design Workshop",
+    "description": "Hands-on workshop on building accessible digital products. All students welcome.",
+    "locationId": "building-a",
+    "date": "2026-04-09",
+    "startTime": "14:00",
+    "endTime": "16:00",
+    "category": "workshop",
+    "isAccessible": true
+  },
+  {
+    "id": "event-4",
+    "title": "International Student Mixer",
+    "description": "Social event for international students — free pizza, games, and networking.",
+    "locationId": "student-hub",
+    "date": "2026-04-09",
+    "startTime": "16:30",
+    "endTime": "18:00",
+    "category": "social",
+    "isAccessible": true
+  },
+  {
+    "id": "event-5",
+    "title": "Campus Basketball Pickup Game",
+    "description": "Casual basketball game at the Sports Centre. All skill levels welcome!",
+    "locationId": "sports-centre",
+    "date": "2026-04-09",
+    "startTime": "17:00",
+    "endTime": "18:30",
+    "category": "sports",
+    "isAccessible": true
+  },
+  {
+    "id": "event-6",
+    "title": "Health Sciences Guest Lecture",
+    "description": "Dr. Sarah Mitchell on 'The Future of Telehealth in Rural Australia'",
+    "locationId": "lecture-theatre-2",
+    "date": "2026-04-09",
+    "startTime": "10:00",
+    "endTime": "11:30",
+    "category": "lecture",
+    "isAccessible": true
+  },
+  {
+    "id": "event-7",
+    "title": "Art Exhibition: Emerging Voices",
+    "description": "Student art exhibition showcasing works from the 2026 cohort. Gallery on ground floor.",
+    "locationId": "building-b",
+    "date": "2026-04-09",
+    "startTime": "10:00",
+    "endTime": "17:00",
+    "category": "social",
+    "isAccessible": false
+  },
+  {
+    "id": "event-8",
+    "title": "Library Research Skills Session",
+    "description": "Learn advanced database searching, referencing tools, and AI-assisted research.",
+    "locationId": "library",
+    "date": "2026-04-09",
+    "startTime": "13:00",
+    "endTime": "14:30",
+    "category": "workshop",
+    "isAccessible": true
+  }
+]

@@ -1,0 +1,272 @@
+[
+  {
+    "id": "main-entrance",
+    "name": "Main Entrance",
+    "type": "entrance",
+    "description": "Primary campus entrance with automatic sliding doors and wheelchair ramp",
+    "lat": -27.4679,
+    "lng": 153.0232,
+    "floor": 0,
+    "accessible": true,
+    "accessibilityNotes": "Automatic doors, flat entry, tactile paving",
+    "icon": "door-open",
+    "searchTags": [
+      "entrance",
+      "main",
+      "front",
+      "gate",
+      "entry"
+    ]
+  },
+  {
+    "id": "library",
+    "name": "Library",
+    "type": "building",
+    "description": "Main campus library with study spaces, computer labs, and quiet zones",
+    "lat": -27.4682,
+    "lng": 153.0238,
+    "floor": 0,
+    "accessible": true,
+    "accessibilityNotes": "Elevator to all floors, accessible restrooms, adjustable desks",
+    "icon": "book-open",
+    "searchTags": [
+      "library",
+      "study",
+      "books",
+      "computer",
+      "reading",
+      "quiet"
+    ]
+  },
+  {
+    "id": "lecture-theatre-1",
+    "name": "Lecture Theatre 1",
+    "type": "lecture",
+    "description": "Large lecture theatre seating 300, with hearing loop and wheelchair spaces",
+    "lat": -27.4684,
+    "lng": 153.0243,
+    "floor": 0,
+    "accessible": true,
+    "accessibilityNotes": "Hearing loop, wheelchair seating in front rows, captioning available",
+    "icon": "presentation",
+    "searchTags": [
+      "lecture",
+      "theatre",
+      "LT1",
+      "class",
+      "hall"
+    ]
+  },
+  {
+    "id": "lecture-theatre-2",
+    "name": "Lecture Theatre 2",
+    "type": "lecture",
+    "description": "Medium lecture theatre seating 150, ground floor access",
+    "lat": -27.4686,
+    "lng": 153.0248,
+    "floor": 0,
+    "accessible": true,
+    "accessibilityNotes": "Ground floor access, hearing loop installed",
+    "icon": "presentation",
+    "searchTags": [
+      "lecture",
+      "theatre",
+      "LT2",
+      "class",
+      "hall"
+    ]
+  },
+  {
+    "id": "lecture-theatre-3",
+    "name": "Lecture Theatre 3",
+    "type": "lecture",
+    "description": "Compact lecture theatre seating 80, first floor via elevator or stairs",
+    "lat": -27.4688,
+    "lng": 153.0235,
+    "floor": 1,
+    "accessible": true,
+    "accessibilityNotes": "Accessible via elevator in Building C",
+    "icon": "presentation",
+    "searchTags": [
+      "lecture",
+      "theatre",
+      "LT3",
+      "class",
+      "hall"
+    ]
+  },
+  {
+    "id": "student-hub",
+    "name": "Student Hub & Cafeteria",
+    "type": "amenity",
+    "description": "Central student space with café, food court, lounge areas, and student services",
+    "lat": -27.468,
+    "lng": 153.0245,
+    "floor": 0,
+    "accessible": true,
+    "accessibilityNotes": "Fully accessible, lowered counter service, accessible seating",
+    "icon": "coffee",
+    "searchTags": [
+      "cafeteria",
+      "food",
+      "coffee",
+      "student",
+      "hub",
+      "lounge",
+      "cafe",
+      "eat",
+      "lunch"
+    ]
+  },
+  {
+    "id": "building-a",
+    "name": "Building A — Innovation Centre",
+    "type": "building",
+    "description": "Houses IT labs, engineering workshops, and innovation spaces",
+    "lat": -27.4677,
+    "lng": 153.0241,
+    "floor": 0,
+    "accessible": true,
+    "accessibilityNotes": "Ramp at east entrance, elevator to all floors",
+    "icon": "building-2",
+    "searchTags": [
+      "building A",
+      "innovation",
+      "IT",
+      "labs",
+      "engineering",
+      "workshop"
+    ]
+  },
+  {
+    "id": "building-b",
+    "name": "Building B — Arts & Design",
+    "type": "building",
+    "description": "Arts studios, design labs, and gallery space. Upper floors accessed by stairs only.",
+    "lat": -27.4675,
+    "lng": 153.0233,
+    "floor": 0,
+    "accessible": false,
+    "accessibilityNotes": "Ground floor accessible only. Upper floors require stairs — no elevator.",
+    "icon": "palette",
+    "searchTags": [
+      "building B",
+      "arts",
+      "design",
+      "studio",
+      "gallery"
+    ]
+  },
+  {
+    "id": "building-c",
+    "name": "Building C — Health Sciences",
+    "type": "building",
+    "description": "Health sciences classrooms, nursing simulation labs, and counselling rooms",
+    "lat": -27.469,
+    "lng": 153.0253,
+    "floor": 0,
+    "accessible": true,
+    "accessibilityNotes": "Full elevator access, accessible restrooms on every floor",
+    "icon": "heart-pulse",
+    "searchTags": [
+      "building C",
+      "health",
+      "nursing",
+      "science",
+      "counselling"
+    ]
+  },
+  {
+    "id": "accessible-parking",
+    "name": "Accessible Parking",
+    "type": "parking",
+    "description": "Designated accessible parking bays near the main entrance with flat pathways to campus",
+    "lat": -27.4672,
+    "lng": 153.0228,
+    "floor": 0,
+    "accessible": true,
+    "accessibilityNotes": "6 designated accessible bays, flat pathway to main entrance, covered walkway",
+    "icon": "car",
+    "searchTags": [
+      "parking",
+      "car",
+      "accessible",
+      "disabled",
+      "wheelchair"
+    ]
+  },
+  {
+    "id": "elevator-building-a",
+    "name": "Elevator — Building A",
+    "type": "facility",
+    "description": "Main elevator in Building A, serves all 4 floors",
+    "lat": -27.4677,
+    "lng": 153.0242,
+    "floor": 0,
+    "accessible": true,
+    "accessibilityNotes": "Braille buttons, audio announcements, wide doors",
+    "icon": "arrow-up-down",
+    "searchTags": [
+      "elevator",
+      "lift",
+      "building A"
+    ]
+  },
+  {
+    "id": "ramp-library",
+    "name": "Ramp — Library Entrance",
+    "type": "facility",
+    "description": "Gentle gradient ramp at the library south entrance",
+    "lat": -27.4683,
+    "lng": 153.0237,
+    "floor": 0,
+    "accessible": true,
+    "accessibilityNotes": "1:20 gradient, handrails both sides, non-slip surface",
+    "icon": "move-diagonal",
+    "searchTags": [
+      "ramp",
+      "library",
+      "wheelchair"
+    ]
+  },
+  {
+    "id": "admin-office",
+    "name": "Administration Office",
+    "type": "building",
+    "description": "Student enrolment, finance, and administrative services",
+    "lat": -27.4683,
+    "lng": 153.0231,
+    "floor": 0,
+    "accessible": true,
+    "accessibilityNotes": "Power-assisted entry doors, lowered service counter",
+    "icon": "briefcase",
+    "searchTags": [
+      "admin",
+      "office",
+      "enrolment",
+      "finance",
+      "administration"
+    ]
+  },
+  {
+    "id": "sports-centre",
+    "name": "Sports & Recreation Centre",
+    "type": "building",
+    "description": "Gymnasium, indoor courts, swimming pool, and fitness centre",
+    "lat": -27.4692,
+    "lng": 153.0258,
+    "floor": 0,
+    "accessible": true,
+    "accessibilityNotes": "Pool hoist available, accessible change rooms, all ground level",
+    "icon": "dumbbell",
+    "searchTags": [
+      "sports",
+      "gym",
+      "pool",
+      "fitness",
+      "recreation",
+      "basketball",
+      "swimming"
+    ]
+  }
+]

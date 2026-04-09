@@ -1,0 +1,232 @@
+[
+  {
+    "id": "path-parking-entrance",
+    "from": "accessible-parking",
+    "to": "main-entrance",
+    "distance": 80,
+    "type": "path",
+    "accessible": true,
+    "indoor": false,
+    "description": "Covered flat pathway from parking to main entrance"
+  },
+  {
+    "id": "path-entrance-library",
+    "from": "main-entrance",
+    "to": "library",
+    "distance": 60,
+    "type": "path",
+    "accessible": true,
+    "indoor": false,
+    "description": "Paved pathway along the central walkway"
+  },
+  {
+    "id": "ramp-to-library",
+    "from": "ramp-library",
+    "to": "library",
+    "distance": 15,
+    "type": "ramp",
+    "accessible": true,
+    "indoor": false,
+    "description": "Gentle ramp to library south entrance"
+  },
+  {
+    "id": "path-entrance-admin",
+    "from": "main-entrance",
+    "to": "admin-office",
+    "distance": 40,
+    "type": "path",
+    "accessible": true,
+    "indoor": false,
+    "description": "Short path to the administration building"
+  },
+  {
+    "id": "path-entrance-hub",
+    "from": "main-entrance",
+    "to": "student-hub",
+    "distance": 100,
+    "type": "path",
+    "accessible": true,
+    "indoor": false,
+    "description": "Wide pathway to the Student Hub"
+  },
+  {
+    "id": "path-library-lt1",
+    "from": "library",
+    "to": "lecture-theatre-1",
+    "distance": 50,
+    "type": "path",
+    "accessible": true,
+    "indoor": false,
+    "description": "Path from library to Lecture Theatre 1"
+  },
+  {
+    "id": "path-lt1-lt2",
+    "from": "lecture-theatre-1",
+    "to": "lecture-theatre-2",
+    "distance": 45,
+    "type": "path",
+    "accessible": true,
+    "indoor": false,
+    "description": "Flat path between lecture theatres"
+  },
+  {
+    "id": "path-lt1-hub",
+    "from": "lecture-theatre-1",
+    "to": "student-hub",
+    "distance": 40,
+    "type": "path",
+    "accessible": true,
+    "indoor": false,
+    "description": "Direct path from LT1 to Student Hub"
+  },
+  {
+    "id": "path-entrance-buildinga",
+    "from": "main-entrance",
+    "to": "building-a",
+    "distance": 70,
+    "type": "path",
+    "accessible": true,
+    "indoor": false,
+    "description": "Path to Building A Innovation Centre"
+  },
+  {
+    "id": "path-buildinga-elevator",
+    "from": "building-a",
+    "to": "elevator-building-a",
+    "distance": 10,
+    "type": "corridor",
+    "accessible": true,
+    "indoor": true,
+    "description": "Short corridor to Building A elevator"
+  },
+  {
+    "id": "stairs-entrance-buildingb",
+    "from": "main-entrance",
+    "to": "building-b",
+    "distance": 55,
+    "type": "stairs",
+    "accessible": false,
+    "indoor": false,
+    "description": "Stairway path to Building B — NOT wheelchair accessible"
+  },
+  {
+    "id": "path-buildinga-buildingb",
+    "from": "building-a",
+    "to": "building-b",
+    "distance": 90,
+    "type": "path",
+    "accessible": true,
+    "indoor": false,
+    "description": "Longer accessible route from Building A to Building B ground floor"
+  },
+  {
+    "id": "path-hub-lt2",
+    "from": "student-hub",
+    "to": "lecture-theatre-2",
+    "distance": 55,
+    "type": "path",
+    "accessible": true,
+    "indoor": false,
+    "description": "Path from Student Hub to LT2"
+  },
+  {
+    "id": "path-lt2-buildingc",
+    "from": "lecture-theatre-2",
+    "to": "building-c",
+    "distance": 60,
+    "type": "path",
+    "accessible": true,
+    "indoor": false,
+    "description": "Accessible path to Building C"
+  },
+  {
+    "id": "path-buildingc-lt3",
+    "from": "building-c",
+    "to": "lecture-theatre-3",
+    "distance": 75,
+    "type": "path",
+    "accessible": true,
+    "indoor": false,
+    "description": "Path from Building C to LT3"
+  },
+  {
+    "id": "stairs-lt1-lt3",
+    "from": "lecture-theatre-1",
+    "to": "lecture-theatre-3",
+    "distance": 30,
+    "type": "stairs",
+    "accessible": false,
+    "indoor": true,
+    "description": "Internal staircase — shortcut but NOT accessible"
+  },
+  {
+    "id": "path-buildingc-sports",
+    "from": "building-c",
+    "to": "sports-centre",
+    "distance": 65,
+    "type": "path",
+    "accessible": true,
+    "indoor": false,
+    "description": "Path from Building C to Sports Centre"
+  },
+  {
+    "id": "path-hub-buildinga",
+    "from": "student-hub",
+    "to": "building-a",
+    "distance": 85,
+    "type": "path",
+    "accessible": true,
+    "indoor": false,
+    "description": "Path from Student Hub to Building A"
+  },
+  {
+    "id": "path-admin-library",
+    "from": "admin-office",
+    "to": "library",
+    "distance": 35,
+    "type": "path",
+    "accessible": true,
+    "indoor": false,
+    "description": "Short walk from Admin to Library"
+  },
+  {
+    "id": "path-parking-buildinga",
+    "from": "accessible-parking",
+    "to": "building-a",
+    "distance": 95,
+    "type": "path",
+    "accessible": true,
+    "indoor": false,
+    "description": "Flat path from parking to Building A"
+  },
+  {
+    "id": "elevator-to-lt3",
+    "from": "elevator-building-a",
+    "to": "lecture-theatre-3",
+    "distance": 120,
+    "type": "elevator",
+    "accessible": true,
+    "indoor": true,
+    "description": "Take elevator up then corridor to LT3 — fully accessible"
+  },
+  {
+    "id": "path-library-ramp",
+    "from": "library",
+    "to": "ramp-library",
+    "distance": 5,
+    "type": "path",
+    "accessible": true,
+    "indoor": false,
+    "description": "Library to its ramp entrance"
+  },
+  {
+    "id": "path-ramp-admin",
+    "from": "ramp-library",
+    "to": "admin-office",
+    "distance": 25,
+    "type": "path",
+    "accessible": true,
+    "indoor": false,
+    "description": "From library ramp to admin office"
+  }
+]

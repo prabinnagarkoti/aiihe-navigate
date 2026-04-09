@@ -1,36 +1,71 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AIIHE Navigate 🎓
 
-## Getting Started
+An inclusive, smart campus navigation Progressive Web App (PWA) built for the Australian Institute of Innovative Higher Education (AIIHE) Brisbane campus.
 
-First, run the development server:
+This project was built to solve real-world campus navigation issues, heavily focusing on wheelchair accessibility, WCAG standards, and usability across desktop, mobile, kiosks, and smartwatches.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🌟 Key Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. **Accessible Route Planner**: Dijkstra-based routing algorithm that prioritizes ramps and elevators when "Wheelchair Mode" is enabled, avoiding all stairs.
+2. **Live GPS Navigation**: Real-time blue-dot tracking using HTML5 Geolocation.
+3. **Voice Guidance**: Turn-by-turn text-to-speech navigation using the browser's Web Speech API.
+4. **High-Contrast Mode**: Instantly toggle to WCAG AAA compliant black/yellow/white scheme.
+5. **Interactive Campus Map**: Leaflet.js with free OpenStreetMap tiles.
+6. **Smartwatch Companion View**: Responsive UI mimicking a paired smartwatch for quick turn glances.
+7. **Kiosk Mode**: Automatically detects large screens (>=1920px) to switch to a full-screen, sidebar layout.
+8. **Fully Installable PWA**: Service workers, offline caching, and "Add to Home Screen" support.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🛠 Tech Stack
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Next.js 15 (App Router)** - React framework
+- **TypeScript** - Strongly typed code
+- **Tailwind CSS** - Utility-first styling
+- **Leaflet & React-Leaflet** - Open-source mapping
+- **Lucide React** - Minimalist icons
+- **Vercel** - Zero-config deployment
 
-## Learn More
+## 🚀 Getting Started
 
-To learn more about Next.js, take a look at the following resources:
+### Local Development
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Clone or download the repository.
+2. Ensure you have Node.js 18+ installed.
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+4. Start the development server:
+   ```bash
+   npm run dev
+   ```
+5. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Map Setup / Custom Coordinates
 
-## Deploy on Vercel
+All map data is stored in simple JSON files. *No backend or API keys are required.*
+To update the campus layout, edit the files in `src/data/`:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **`campus-locations.json`**: Add/edit buildings, rooms, elevators, and entrances. Include exact `lat`/`lng` coordinates.
+- **`campus-paths.json`**: Define the walking graph. Each edge has a `from`, `to`, `type` (e.g., stairs, ramp), and an `accessible` boolean.
+- **`campus-events.json`**: Update today's schedule for the event feed.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+*Note: For the best results when capturing lat/lng, use Google Maps on desktop, right-click exactly on a doorway or ramp, and copy the coordinates.*
+
+## 🌍 Instant Vercel Deployment
+
+This app is ready to deploy directly to Vercel without any special configuration.
+
+1. Push this folder to a GitHub repository.
+2. Log in to [Vercel](https://vercel.com) and click **"Add New Project"**.
+3. Import your GitHub repository.
+4. Keep all default settings (Framework Preset: Next.js).
+5. Click **Deploy**.
+6. Done! Your PWA is live and installable on any iOS or Android device.
+
+## ♿ Accessibility Notes
+
+This project was built following universal design principles:
+- Minimum `48x48px` touch targets for interactive elements.
+- ARIA roles (`role="combobox"`, `role="switch"`, `aria-live`, etc.) manually implemented across custom UI components.
+- Color palettes tested for major types of color-blindness.
+- Purely browser-native APIs (Geolocation, Speech) to ensure maximum device compatibility without 3rd party bloat.

@@ -6,7 +6,9 @@
     "locationId": "bggs-year5",
     "startTime": "09:00",
     "endTime": "11:00",
-    "date": "Today"
+    "date": "Today",
+    "category": "orientation",
+    "isAccessible": true
   },
   {
     "id": "event-2",
@@ -15,7 +17,9 @@
     "locationId": "bggs-reception",
     "startTime": "13:00",
     "endTime": "13:30",
-    "date": "Today"
+    "date": "Today",
+    "category": "social",
+    "isAccessible": true
   },
   {
     "id": "event-3",
@@ -24,6 +28,8 @@
     "locationId": "bggs-podium",
     "startTime": "14:00",
     "endTime": "15:00",
-    "date": "Tomorrow"
+    "date": "Tomorrow",
+    "category": "workshop",
+    "isAccessible": true
   }
 ]

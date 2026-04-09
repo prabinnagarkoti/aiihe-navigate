@@ -2,46 +2,61 @@
   {
     "id": "bggs-undercroft",
     "name": "Undercroft Car Park",
-    "type": "entrance",
-    "coordinates": [-27.4585, 153.0245],
+    "type": "parking",
+    "lat": -27.4585,
+    "lng": 153.0245,
     "description": "Lower level parking including 1 PWD space and loading bay.",
     "floor": 0,
-    "accessible": true
+    "accessible": true,
+    "icon": "parking",
+    "searchTags": ["parking", "car", "pwd", "loading", "basement"]
   },
   {
     "id": "bggs-reception",
     "name": "Reception / Admin Hub",
     "type": "facility",
-    "coordinates": [-27.4589, 153.0245],
+    "lat": -27.4589,
+    "lng": 153.0245,
     "description": "Main administrative hub and check-in.",
     "floor": 1,
-    "accessible": true
+    "accessible": true,
+    "icon": "building",
+    "searchTags": ["admin", "reception", "desk", "check in", "help"]
   },
   {
     "id": "bggs-year5",
     "name": "Year 5 Hub",
-    "type": "classroom",
-    "coordinates": [-27.4590, 153.0248],
+    "type": "lecture",
+    "lat": -27.4590,
+    "lng": 153.0248,
     "description": "Educational facility hub for Year 5 cohort.",
     "floor": 2,
-    "accessible": true
+    "accessible": true,
+    "icon": "lecture",
+    "searchTags": ["classroom", "year 5", "hub", "education"]
   },
   {
     "id": "bggs-year6",
     "name": "Year 6 Hub",
-    "type": "classroom",
-    "coordinates": [-27.4586, 153.0248],
+    "type": "lecture",
+    "lat": -27.4586,
+    "lng": 153.0248,
     "description": "Educational facility hub for Year 6 cohort.",
     "floor": 3,
-    "accessible": true
+    "accessible": true,
+    "icon": "lecture",
+    "searchTags": ["classroom", "year 6", "hub", "education"]
   },
   {
     "id": "bggs-podium",
     "name": "Podium Planting Area",
-    "type": "facility",
-    "coordinates": [-27.4588, 153.0240],
+    "type": "amenity",
+    "lat": -27.4588,
+    "lng": 153.0240,
     "description": "Elevated green space and recreational planting zone.",
     "floor": 1,
-    "accessible": true
+    "accessible": true,
+    "icon": "amenity",
+    "searchTags": ["garden", "podium", "green", "outside", "eating"]
   }
 ]

@@ -79,11 +79,11 @@ export default function CampusMap({
           className="opacity-90"
         />
 
-        {/* NATIVE VECTOR LAYER BLEND (Uses CSS multiply to burn the blueprint lines natively into the street layer!) */}
+        {/* NATIVE VECTOR LAYER BLEND */}
         <ImageOverlay
           url="/campus_floorplan.png"
           bounds={CAMPUS_BOUNDS}
-          className="mix-blend-multiply opacity-80 z-20 pointer-events-none"
+          className="opacity-90 z-20 pointer-events-none"
         />
 
         <ZoomControl position="topright" />

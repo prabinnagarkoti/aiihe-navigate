@@ -90,7 +90,7 @@ export default function HomePage() {
         {/* Quick Actions */}
         <section className="bg-white dark:bg-gray-900 rounded-3xl p-6 shadow-xl border border-gray-100 dark:border-gray-800 mb-8" aria-labelledby="quick-actions-title">
           <h2 id="quick-actions-title" className="sr-only">Quick Actions</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
             {[
               { label: 'Campus Map', icon: MapIcon, color: 'text-blue-500', bg: 'bg-blue-50 dark:bg-blue-900/40', path: '/navigate' },
               { label: 'Route Planner', icon: Navigation2, color: 'text-emerald-500', bg: 'bg-emerald-50 dark:bg-emerald-900/40', path: '/route-planner' },
@@ -109,6 +109,25 @@ export default function HomePage() {
               </button>
             ))}
           </div>
+          
+          {/* External Navigation Handoff */}
+          <a
+            href="https://maps.google.com/?q=-27.4588,153.0245"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-between w-full p-4 rounded-2xl bg-indigo-50 dark:bg-indigo-900/30 border border-indigo-100 dark:border-indigo-800 text-indigo-700 dark:text-indigo-300 transition-all hover:bg-indigo-100 dark:hover:bg-indigo-900/50 focus:outline-none focus-visible:ring-4 focus-visible:ring-indigo-400"
+          >
+            <div className="flex items-center gap-3">
+              <div className="bg-indigo-600 text-white rounded-xl p-2">
+                <MapIcon size={20} />
+              </div>
+              <div className="text-left">
+                <h3 className="font-bold text-sm">Not on campus yet?</h3>
+                <p className="text-xs opacity-80">Get Driving Directions via Google Maps</p>
+              </div>
+            </div>
+            <span className="font-bold">&rarr;</span>
+          </a>
         </section>
 
         {/* Upcoming Events Preview */}

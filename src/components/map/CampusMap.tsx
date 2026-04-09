@@ -36,11 +36,7 @@ function MapReadyHandler({ onMapReady }: { onMapReady?: (map: L.Map) => void }) 
 
   useEffect(() => {
     if (!called.current && onMapReady) {
-      // Restrict map panning to just outside the blueprint bounds
-      const bounds = L.latLngBounds(CAMPUS_BOUNDS);
-      map.setMaxBounds(bounds.pad(0.5));
-      map.setMinZoom(16);
-      
+      // We removed strict panning restrictions to allow users to view surrounding city streets
       onMapReady(map);
       called.current = true;
     }
@@ -67,6 +63,13 @@ export default function CampusMap({
         scrollWheelZoom={true}
         style={{ height: '100%', width: '100%' }}
       >
+        {/* Re-enabled street map for outdoor context (macro-navigation) */}
+        <TileLayer
+          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          className="opacity-60 grayscale dark:opacity-30 dark:invert"
+        />
+
         <ImageOverlay
           url="/campus_floorplan.png"
           bounds={CAMPUS_BOUNDS}

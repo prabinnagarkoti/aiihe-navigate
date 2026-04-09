@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useEffect, useRef } from 'react';
-import { MapContainer, ImageOverlay, ZoomControl, useMap } from 'react-leaflet';
+import { MapContainer, ImageOverlay, ZoomControl, useMap, TileLayer } from 'react-leaflet';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 

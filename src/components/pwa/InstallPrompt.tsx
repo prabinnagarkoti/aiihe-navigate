@@ -80,7 +80,7 @@ export default function InstallPrompt() {
             </p>
           ) : (
             <p className="text-xs text-gray-600 dark:text-gray-300 mb-3">
-              Install AIIHE Navigate for offline use and quick access.
+              Install BGGS Navigate for offline use and quick access.
             </p>
           )}
 

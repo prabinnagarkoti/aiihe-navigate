@@ -21,17 +21,24 @@ export default function RoutePlannerPage() {
     origin, setOrigin, 
     destination, setDestination,
     currentRoute, setRoute,
-    startNavigation 
+    startNavigation,
+    userPosition
   } = useNavigation();
   const { wheelchairMode, setWheelchairMode } = useAccessibility();
   
   const [locations] = useState<CampusLocation[]>(campusLocations as CampusLocation[]);
   const [error, setError] = useState<string | null>(null);
+  const [useCurrentLocation, setUseCurrentLocation] = useState(false);
 
   // Auto-calculate route when origin, destination, or mode changes
   useEffect(() => {
-    if (origin && destination) {
-      if (origin.id === destination.id) {
+    // If using current location, we need to create a fake origin node linking to the closest real node
+    const effectiveOrigin = useCurrentLocation && userPosition 
+      ? { id: 'current-gps', name: 'My Current Location', type: 'entrance', lat: userPosition.lat, lng: userPosition.lng, accessible: true, icon: 'map-pin', searchTags: [] } as CampusLocation
+      : origin;
+
+    if (effectiveOrigin && destination) {
+      if (effectiveOrigin.id === destination.id) {
         setError('Origin and destination cannot be the same.');
         setRoute(null);
         return;
@@ -40,12 +47,31 @@ export default function RoutePlannerPage() {
       const route = calculateRoute(
         locations, 
         campusPaths as any, 
-        origin.id, 
+        useCurrentLocation ? 'bggs-reception' : effectiveOrigin.id, // Route to the reception first if external
         destination.id, 
         wheelchairMode
       );
       
       if (route) {
+        // If coming from off-campus, prepend a macro-route step to the school entrance
+        if (useCurrentLocation && userPosition) {
+            const entrance = locations.find(l => l.id === 'bggs-reception')!;
+            const dist = Math.round(
+              Math.sqrt(Math.pow(userPosition.lat - entrance.lat, 2) + Math.pow(userPosition.lng - entrance.lng, 2)) * 111320
+            );
+            route.steps.unshift({
+                instruction: `Navigate via Brisbane streets to BGGS Reception Main Entrance`,
+                distance: dist,
+                fromLocation: effectiveOrigin,
+                toLocation: entrance,
+                pathType: 'path',
+                accessible: true
+            });
+            route.totalDistance += dist;
+            route.estimatedTime += Math.round(dist / 80);
+            route.path.unshift(effectiveOrigin);
+        }
+
         setRoute(route);
         setError(null);
       } else {
@@ -56,7 +82,7 @@ export default function RoutePlannerPage() {
       setRoute(null);
       setError(null);
     }
-  }, [origin, destination, wheelchairMode, locations, setRoute]);
+  }, [origin, destination, wheelchairMode, locations, setRoute, useCurrentLocation, userPosition]);
 
   const handleSwap = () => {
     const temp = origin;
@@ -87,14 +113,21 @@ export default function RoutePlannerPage() {
             </label>
             <select
               id="origin"
-              value={origin?.id || ''}
+              value={useCurrentLocation ? 'current-gps' : (origin?.id || '')}
               onChange={(e) => {
-                const loc = locations.find(l => l.id === e.target.value);
-                setOrigin(loc || null);
+                if (e.target.value === 'current-gps') {
+                    setUseCurrentLocation(true);
+                    setOrigin(null);
+                } else {
+                    setUseCurrentLocation(false);
+                    const loc = locations.find(l => l.id === e.target.value);
+                    setOrigin(loc || null);
+                }
               }}
               className="w-full p-3 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 focus:outline-none focus-visible:ring-4 focus-visible:ring-blue-400"
             >
               <option value="">Select starting location...</option>
+              <option value="current-gps" className="font-bold text-blue-600">📍 My Current GPS Location</option>
               {locations.map(loc => (
                 <option key={loc.id} value={loc.id}>{loc.name}</option>
               ))}

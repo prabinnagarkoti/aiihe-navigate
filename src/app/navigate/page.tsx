@@ -66,18 +66,29 @@ export default function NavigatePage() {
       
       {/* Top Banner for Active Navigation */}
       {isNavigating && currentStep && (
-        <div className="absolute top-4 left-4 right-4 z-[400] bg-white/90 dark:bg-gray-800/90 backdrop-blur-md rounded-2xl p-4 shadow-xl border border-gray-200 dark:border-gray-700">
-          <div className="flex items-start gap-4">
-            <div className="bg-blue-100 dark:bg-blue-900/50 p-3 rounded-xl">
-              <Navigation2 size={24} className="text-blue-600 dark:text-blue-400" />
+        <div className="absolute top-4 left-4 right-4 z-[400] overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-indigo-600 opacity-95"></div>
+          <div className="relative p-5 shadow-2xl rounded-2xl border border-white/20 text-white flex flex-col gap-3">
+            <div className="flex items-start gap-4">
+              <div className="bg-white/20 p-4 rounded-2xl shadow-inner backdrop-blur-md">
+                <Navigation2 size={32} className="text-white drop-shadow-md" />
+              </div>
+              <div className="flex-1 min-w-0">
+                <p className="text-sm font-semibold text-blue-100 uppercase tracking-widest mb-1">
+                  In {currentStep.distance}m
+                </p>
+                <p className="text-2xl font-bold leading-tight drop-shadow-md">
+                  {currentStep.instruction}
+                </p>
+              </div>
             </div>
-            <div className="flex-1 min-w-0">
-              <p className="text-sm text-gray-500 dark:text-gray-400 font-medium mb-1">
-                Next up • {currentStep.distance}m
-              </p>
-              <p className="text-xl font-bold text-gray-900 dark:text-white leading-tight">
-                {currentStep.instruction}
-              </p>
+            {/* Massive explicit voice nav toggle */}
+            <div className="pt-2 border-t border-white/20 mt-1 flex justify-between items-center">
+              <VoiceGuidance 
+                directions={currentRoute.steps.slice(currentStepIndex).map(s => s.instruction)}
+                enabled={voiceGuidance}
+              />
+              <span className="text-xs bg-white/20 px-3 py-1 rounded-full backdrop-blur-sm">Turn-by-turn Active</span>
             </div>
           </div>
         </div>

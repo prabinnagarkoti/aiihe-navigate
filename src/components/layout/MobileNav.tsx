@@ -3,14 +3,13 @@
 import React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Home, Map, Route, Calendar, Search } from 'lucide-react';
+import { Home, Map, BellRing, User } from 'lucide-react';
 
 const navItems = [
   { href: '/', label: 'Home', icon: Home },
   { href: '/navigate', label: 'Map', icon: Map },
-  { href: '/route-planner', label: 'Routes', icon: Route },
-  { href: '/events', label: 'Events', icon: Calendar },
-  { href: '/search', label: 'Search', icon: Search },
+  { href: '/alerts', label: 'Alerts', icon: BellRing },
+  { href: '/profile', label: 'Profile', icon: User },
 ];
 
 export default function MobileNav() {

@@ -33,6 +33,15 @@ body {
   @apply bg-gray-950 text-gray-100;
 }
 
+/* ---------- Premium UI Utilities ---------- */
+.glass-panel {
+  @apply bg-white/70 dark:bg-gray-900/70 backdrop-blur-xl border border-white/20 dark:border-gray-800/50 shadow-2xl;
+}
+
+.hover-lift {
+  @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-500/20;
+}
+
 /* ---------- High Contrast Mode ---------- */
 .high-contrast {
   --color-primary: #ffff00;

@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useEffect, useRef } from 'react';
-import { MapContainer, TileLayer, ZoomControl, useMap } from 'react-leaflet';
+import { MapContainer, ImageOverlay, ZoomControl, useMap } from 'react-leaflet';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 
@@ -15,6 +15,11 @@ L.Icon.Default.mergeOptions({
 
 // Campus center coordinates (Brisbane, QLD)
 const CAMPUS_CENTER: [number, number] = [-27.4682, 153.0238];
+// Create bounds around the center to pin the blueprint image onto
+const CAMPUS_BOUNDS: [[number, number], [number, number]] = [
+  [-27.4720, 153.0180], // Southwest corner
+  [-27.4640, 153.0290], // Northeast corner
+];
 const DEFAULT_ZOOM = 17;
 
 interface CampusMapProps {
@@ -31,6 +36,11 @@ function MapReadyHandler({ onMapReady }: { onMapReady?: (map: L.Map) => void }) 
 
   useEffect(() => {
     if (!called.current && onMapReady) {
+      // Restrict map panning to just outside the blueprint bounds
+      const bounds = L.latLngBounds(CAMPUS_BOUNDS);
+      map.setMaxBounds(bounds.pad(0.5));
+      map.setMinZoom(16);
+      
       onMapReady(map);
       called.current = true;
     }
@@ -52,14 +62,15 @@ export default function CampusMap({
         center={center}
         zoom={zoom}
         zoomControl={false}
-        className="w-full h-full z-0"
-        attributionControl={true}
+        className="w-full h-full z-0 bg-gray-50 dark:bg-gray-900"
+        attributionControl={false}
         scrollWheelZoom={true}
         style={{ height: '100%', width: '100%' }}
       >
-        <TileLayer
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        <ImageOverlay
+          url="/campus_floorplan.png"
+          bounds={CAMPUS_BOUNDS}
+          opacity={0.9}
         />
         <ZoomControl position="topright" />
         <MapReadyHandler onMapReady={onMapReady} />

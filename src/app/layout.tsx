@@ -19,13 +19,13 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "AIIHE Navigate | Smart Campus Navigation",
-  description: "Inclusive smart campus navigation system for AIIHE Brisbane.",
+  title: "BGGS Navigate | Junior Campus Smart Routing",
+  description: "Inclusive smart campus navigation system for Brisbane Girls Grammar School, Spring Hill.",
   manifest: "/manifest.json",
   appleWebApp: {
     capable: true,
     statusBarStyle: "default",
-    title: "AIIHE Navigate",
+    title: "BGGS Navigate",
   },
 };
 

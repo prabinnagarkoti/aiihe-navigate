@@ -1,7 +1,7 @@
 {
-  "name": "AIIHE Navigate",
-  "short_name": "Navigate",
-  "description": "Inclusive Smart Campus Navigation System",
+  "name": "BGGS Junior Campus Navigate",
+  "short_name": "BGGS Nav",
+  "description": "Inclusive smart campus navigation system for Brisbane Girls Grammar.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",

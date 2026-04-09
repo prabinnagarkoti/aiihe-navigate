@@ -34,17 +34,13 @@ export default function Sidebar() {
     >
       {/* Logo area */}
       <div className="p-6 border-b border-gray-100 dark:border-gray-800">
-        <Link href="/" className="flex items-center gap-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 rounded-lg">
-          <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-600 to-emerald-500 flex items-center justify-center shadow-xl shadow-blue-500/20">
-            <Navigation size={24} className="text-white" />
+        <Link href="/" className="flex items-center gap-3">
+          <div className="bg-blue-600 text-white p-2 rounded-xl shadow-md shadow-blue-600/20">
+            <Navigation className="h-6 w-6" />
           </div>
           <div>
-            <h1 className="font-bold text-xl text-gray-900 dark:text-white tracking-tight">
-              AIIHE Navigate
-            </h1>
-            <p className="text-xs text-gray-500 dark:text-gray-400">
-              Smart Campus Navigation
-            </p>
+            <h1 className="font-bold text-xl tracking-tight text-gray-900 dark:text-white">BGGS Navigate</h1>
+            <p className="text-xs text-gray-500 font-medium">Spring Hill Campus</p>
           </div>
         </Link>
       </div>

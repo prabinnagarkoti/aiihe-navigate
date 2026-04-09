@@ -13,12 +13,12 @@ L.Icon.Default.mergeOptions({
   shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-shadow.png',
 });
 
-// Campus center coordinates (Brisbane, QLD)
-const CAMPUS_CENTER: [number, number] = [-27.4682, 153.0238];
+// BGGS Junior Campus center coordinates (-27.4588, 153.0245)
+const CAMPUS_CENTER: [number, number] = [-27.4588, 153.0245];
 // Create bounds around the center to pin the blueprint image onto
 const CAMPUS_BOUNDS: [[number, number], [number, number]] = [
-  [-27.4720, 153.0180], // Southwest corner
-  [-27.4640, 153.0290], // Northeast corner
+  [-27.4595, 153.0238], // Southwest corner
+  [-27.4582, 153.0252], // Northeast corner
 ];
 const DEFAULT_ZOOM = 17;
 

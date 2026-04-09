@@ -39,25 +39,25 @@ export default function HomePage() {
     <div className="flex flex-col h-full bg-gray-50 dark:bg-gray-950">
       {/* Hero Section */}
       <section 
-        className="bg-gradient-to-br from-blue-900 to-blue-800 text-white rounded-b-[2.5rem] pt-12 pb-16 px-6 shadow-2xl relative overflow-hidden"
+        className="bg-gradient-to-br from-blue-900 to-indigo-800 text-white rounded-b-[2.5rem] pt-12 pb-16 px-6 shadow-2xl relative overflow-hidden"
         aria-labelledby="hero-title"
       >
-        <div className="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 bg-emerald-500 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
-        <div className="absolute bottom-0 left-0 -ml-16 -mb-16 w-64 h-64 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
+        <div className="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
+        <div className="absolute bottom-0 left-0 -ml-16 -mb-16 w-64 h-64 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
         
         <div className="max-w-2xl mx-auto relative z-10">
           <h1 id="hero-title" className="text-4xl md:text-5xl font-bold mb-4 tracking-tight">
-            Navigate AIIHE Inclusively.
+            Navigate BGGS.
           </h1>
           <p className="text-blue-100 text-lg mb-8 max-w-lg">
-            Find accessible routes, explore buildings, and never be late for a class again.
+            Inclusive wayfinding for the Junior School Campus at Spring Hill.
           </p>
           
           <div className="mb-6 relative z-20">
             <SearchBar 
               locations={locations} 
               onSelect={handleSearchSelect} 
-              placeholder="Where do you want to go?"
+              placeholder="Find Year Level hubs, cars parks, or facilities..."
             />
           </div>
 
